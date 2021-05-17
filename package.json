@@ -8,7 +8,8 @@
     "build": "tsc -b",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "node dist/main",
-    "dev": "nodemon src/index.ts"
+    "dev": "nodemon src/index.ts",
+    "debug": "nodemon --inspect=5858 -e ts,tsx --exec node -r ts-node/register ./src/index.ts"
   },
   "dependencies": {
     "dotenv": "^9.0.2",

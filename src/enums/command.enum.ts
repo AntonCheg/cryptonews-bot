@@ -1,3 +1,3 @@
 export const enum CommandEnum {
-  TEST = 'TEST',
+  TEST = 'test',
 }

@@ -1,12 +1,14 @@
 import { CommandEnum } from 'src/enums/command.enum';
-import { Context } from 'telegraf';
+import { CustomContext } from './interfaces';
 
-type HandlerFunctionType = (ctx: Context) => Promise<void>;
+type HandlerFunctionType = (ctx: CustomContext) => Promise<void>;
 
 export const CommandHandlersMap = new Map<CommandEnum, HandlerFunctionType>().set(
   CommandEnum.TEST,
-  async (ctx: Context) => {
-    const chatId = await ctx.getChat().then((chat) => chat.id);
-    ctx.telegram.sendMessage(chatId, `Hello ${ctx.state.role}`);
+  async (ctx: CustomContext) => {
+    // const chatId = await ctx.getChat().then((chat) => chat.id);
+    await ctx.reply(
+      `SenderId - ${ctx.senderId}\n ChatId - ${ctx.chatId}\n MessageId - ${ctx.messageId} \n MessageText - ${ctx.messageText}`,
+    );
   },
 );

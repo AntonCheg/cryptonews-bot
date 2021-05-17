@@ -1,10 +1,6 @@
 import { config } from 'dotenv';
 
 export class ConfigService {
-  //   constructor() {
-  //     config();
-  //   }
-
   public static initialize() {
     config();
   }
