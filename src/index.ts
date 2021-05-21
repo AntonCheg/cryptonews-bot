@@ -8,9 +8,7 @@ const init = async () => {
 
   const token = ConfigService.get<string>('TOKEN');
 
-  const dbUrl = ConfigService.get<string>('DB_URL');
-
-  await createConnection({ type: 'postgres', url: dbUrl });
+  await createConnection();
 
   const bot = new Bot(token);
 
