@@ -12,9 +12,13 @@
     "debug": "nodemon --inspect=5858 -e ts,tsx --exec node -r ts-node/register ./src/index.ts"
   },
   "dependencies": {
+    "@types/node": "^15.6.0",
     "dotenv": "^9.0.2",
+    "pg": "^8.6.0",
+    "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
-    "telegraf": "^4.3.0"
+    "telegraf": "^4.3.0",
+    "typeorm": "^0.2.32"
   },
   "devDependencies": {
     "eslint": "^7.26.0",
