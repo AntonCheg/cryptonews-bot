@@ -38,3 +38,4 @@ lerna-debug.log*
 
 # Secure Values (keys, etc.)
 .secure_vault
+yarn.lock
